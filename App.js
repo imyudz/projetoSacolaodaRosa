@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'; //Importa react para o app
+import { StatusBar, View } from 'react-native'; // importa os elementos necessários para o react native
+import Cesta from './src/screen/Cesta';//Importa o arquivo com as funções que você criou
 
-export default function App() {
+export default function App() { //Função que roda tudo dentro do App
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
+    //View: Função que mostra os arquivos
+    <View>
+      {/* Todas as Funções criadas viram  tags e podem ser facilmente adicionadas e estilizaadas*/}
+      <Cesta/>
+      <StatusBar/>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
